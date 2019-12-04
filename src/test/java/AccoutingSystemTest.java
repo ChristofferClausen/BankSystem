@@ -14,17 +14,14 @@ public class AccoutingSystemTest {
 
     @Test
     public void createPersonTest() {
-        createPerson();
     }
 
     @Test
     public void createBankTest() {
-        createBank();
     }
 
     @Test
     public void createAccountTest() {
-        createAccount();
     }
 
 }
