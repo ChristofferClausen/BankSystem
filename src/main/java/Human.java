@@ -1,4 +1,5 @@
 public interface Human {
+    int getId();
 
     String getFirstName();
 
