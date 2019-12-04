@@ -1,10 +1,14 @@
+public interface Human {
 
-package src.main.java;
+    String getFirstName();
 
-public abstract class Human {
+    String getLastName();
 
-    String firstName;
-    String lastName;
-    int age;
-    
+    int getAge();
+
+    void setFirstName(String firstName);
+
+    void setLastName(String lastName);
+
+    void setAge(int age);
 }
