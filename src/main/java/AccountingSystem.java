@@ -1,5 +1,4 @@
 import src.main.java.Bank;
-
 import java.util.ArrayList;
 
 public class AccountingSystem {
@@ -17,7 +16,7 @@ public class AccountingSystem {
     }
 
     public void createBank(String s) {
-        Bank b = new Bank(s);
+        //Bank b = new Bank(s);
     }
 
     public void createPerson(String fn, String ln, int age) {
@@ -26,6 +25,6 @@ public class AccountingSystem {
     }
 
     public void createAccount(double saldo, Person p, Bank b) {
-        Account account = new Account(saldo, p, b);
+        //Account account = new Account(saldo, p, b);
     }
 }
