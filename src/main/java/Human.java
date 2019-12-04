@@ -7,4 +7,6 @@ public interface Human {
     String lastName;
     int age;
 
+
+
 }
