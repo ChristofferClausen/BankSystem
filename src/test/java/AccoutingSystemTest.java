@@ -7,24 +7,24 @@ public class AccoutingSystemTest {
 
     private AccountingSystem accountingSystem;
 
-    @Test
-    public void constructorTest() {
-        AccountingSystem accountingSystem = new AccountingSystem();
-    }
-
-    @Test
-    public void createPersonTest() {
-        createPerson();
-    }
-
-    @Test
-    public void createBankTest() {
-        createBank();
-    }
-
-    @Test
-    public void createAccountTest() {
-        createAccount();
-    }
-
+//    @Test
+//    public void constructorTest() {
+//        AccountingSystem accountingSystem = new AccountingSystem();
+//    }
+//
+//    @Test
+//    public void createPersonTest() {
+//        createPerson();
+//    }
+//
+//    @Test
+//    public void createBankTest() {
+//        createBank();
+//    }
+//
+//    @Test
+//    public void createAccountTest() {
+//        createAccount();
+//    }
+//
 }
