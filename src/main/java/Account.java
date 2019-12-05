@@ -25,6 +25,14 @@ public class Account {
         return amount;
     }
 
+    public void addAmount(double a) {
+        amount = amount + a;
+    }
+
+    public void removeAmount(double a) {
+        amount = amount - a;
+    }
+
     public Person getPerson() {
         return person;
     }
