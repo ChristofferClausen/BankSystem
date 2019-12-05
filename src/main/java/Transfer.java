@@ -53,4 +53,11 @@ public class Transfer {
             }
         }
     }
+    public boolean checkAccountId(int id) {
+        List<Account> filterList = accountList.stream()
+                .filter(e -> e.getId() == id)
+                .collect(Collectors.toList());
+        return filterList.size() == 1;
+    }
+
 }

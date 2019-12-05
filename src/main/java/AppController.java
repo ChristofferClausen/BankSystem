@@ -2,15 +2,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-
-import java.awt.*;
+import javafx.scene.control.Button;
 import java.io.IOException;
 
 public class AppController {
     @FXML private TextArea messageTransfer;
-    @FXML private TextField idAmount;
-    @FXML private javafx.scene.control.TextField idTextTo;
-    @FXML private javafx.scene.control.TextField idTextFr;
+    @FXML private TextField idAmount, idTextTo, idTextFr, textId;
+    @FXML private Button selectId;
+
 
     public AppController() {
     }
@@ -41,7 +40,7 @@ public class AppController {
 
     @FXML
     private void goToRedanKund() throws IOException {
-        App.setRoot("redankund");
+        App.setRoot("selectClient");
     }
     @FXML
     private void goToWithdraw() throws IOException {
@@ -68,6 +67,14 @@ public class AppController {
         idTextTo.setText("");
         idAmount.setText("");
         messageTransfer.setText("");
+    }
 
+    @FXML
+    private void selectOneAccount(ActionEvent actionEvent) throws IOException {
+        int id = Integer.parseInt(textId.getText());
+        boolean exist = Transfer.getInstance().checkAccountId(id);
+        if (exist){
+            App.setRoot("redankund");
+        }
     }
 }
