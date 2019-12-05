@@ -21,7 +21,7 @@ class BankTest {
     @DisplayName("Setter Test")
     void setName() {
         bank= new Bank("Handelsbanken");
-        bank.setName("Swedebank");
-        assertEquals("Swedebank", bank.getName());
+//        bank.setName("Swedebank");
+        assertEquals("Swedebank", bank.setName("Swedebank"));
     }
 }
