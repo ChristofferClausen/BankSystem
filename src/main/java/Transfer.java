@@ -19,6 +19,8 @@ public class Transfer {
         if (transferAmount <= from.getAmount()) {
             from.removeAmount(transferAmount);
             to.addAmount(transferAmount);
+            System.out.println("Current balance of sending account: " + from.getAmount());
+            System.out.println("Current balance of receiving account: "+ to.getAmount());
         }
     }
 }
