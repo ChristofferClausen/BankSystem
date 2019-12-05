@@ -3,14 +3,14 @@ import java.util.UUID;
 public class Account {
 
     private UUID id;
-    private double amount;
+    private double amount = 0;
     private Person person;
     private Bank bank;
 
-    public Account(double a, Person p, Bank b) {
-        this.amount = a;
+    public Account(Person p, Bank b) {
         this.person = p;
         this.bank = b;
+        assignId();
     }
 
     private void assignId() {
