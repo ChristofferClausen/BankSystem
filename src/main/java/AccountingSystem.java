@@ -1,4 +1,3 @@
-import src.main.java.Bank;
 import java.util.ArrayList;
 
 public class AccountingSystem {

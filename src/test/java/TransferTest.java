@@ -4,7 +4,7 @@ import org.junit.jupiter.api.*;
 public class TransferTest {
 
     Person person = new Person(1,"Firstname", "Lastname", 25);
-    Bank bank = new Bank();
+    Bank bank = new Bank("test");
     Account account = new Account(person, bank);
     Account account2 = new Account(person, bank);
     Transfer transfer = new Transfer();

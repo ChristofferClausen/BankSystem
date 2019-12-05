@@ -1,12 +1,19 @@
-package src.main.java;
+public class Bank {
 
-public interface Bank {
+    private String name;
 
-    void deposit(float amount);
-    void withdraw(float amount );
-    float account();
-    int getAccountId();
+    public Bank(String name) {
+        this.name = name;
+    }
 
+    public String getName() {
+        return name;
+    }
 
+    public String setName(String name) {
+        this.name = name;
+        return name;
+    }
 
 }
+

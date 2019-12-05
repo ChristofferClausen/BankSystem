@@ -3,14 +3,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BankNameTest {
+class BankTest {
 
-    BankName bank;
+    Bank bank;
 
     @Test
     @DisplayName("Getter Test")
     void getName() {
-        bank= new BankName("Handelsbanken");
+        bank= new Bank("Handelsbanken");
         assertAll(
                 ()-> assertEquals("Handelsbanken", bank.getName()),
                 ()-> assertNotNull(bank));
@@ -20,7 +20,7 @@ class BankNameTest {
     @Test
     @DisplayName("Setter Test")
     void setName() {
-        bank= new BankName("Handelsbanken");
+        bank= new Bank("Handelsbanken");
         bank.setName("Swedebank");
         assertEquals("Swedebank", bank.getName());
     }

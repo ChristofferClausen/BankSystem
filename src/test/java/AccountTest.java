@@ -4,7 +4,7 @@ import org.junit.jupiter.api.*;
 public class AccountTest {
 
     Person person = new Person(1,"Firstname", "Lastname", 25);
-    Bank bank = new Bank();
+    Bank bank = new Bank("test");
     Account account = new Account(person, bank);
 
     @Order(1)
