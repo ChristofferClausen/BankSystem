@@ -3,11 +3,8 @@ import java.util.ArrayList;
 public class AccountingSystem {
     private ArrayList<Person> persons;
 
-    private int nextPersonId;
-
     public AccountingSystem() {
         this.persons = new ArrayList<>();
-        nextPersonId = 1;
     }
 
     public ArrayList<Person> getPersons() {
@@ -19,7 +16,7 @@ public class AccountingSystem {
     }
 
     public void createPerson(String fn, String ln, int age) {
-        Person person = new Person(nextPersonId++, fn, ln, age);
+        Person person = new Person(fn, ln, age);
         persons.add(person);
     }
 
