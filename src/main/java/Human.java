@@ -1,5 +1,7 @@
+import java.util.UUID;
+
 public interface Human {
-    int getId();
+    UUID getId();
 
     String getFirstName();
 

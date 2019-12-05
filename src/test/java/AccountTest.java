@@ -3,7 +3,7 @@ import org.junit.jupiter.api.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class AccountTest {
 
-    Person person = new Person(1,"Firstname", "Lastname", 25);
+    Person person = new Person("Firstname", "Lastname", 25);
     Bank bank = new Bank();
     Account account = new Account(person, bank);
 

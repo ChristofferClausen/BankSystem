@@ -1,19 +1,21 @@
+import java.util.UUID;
+
 public class Person implements Human {
 
-    private int id;
+    private UUID id;
     private String firstName;
     private String lastName;
     private int age;
 
-    public Person(int id, String firstName, String lastName, int age) {
-        this.id = id;
+    public Person(String firstName, String lastName, int age) {
+        this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
     }
 
     @Override
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 

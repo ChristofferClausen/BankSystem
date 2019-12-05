@@ -1,5 +1,3 @@
-package src.main.java;
-
 public interface Bank {
 
     void deposit(float amount);
