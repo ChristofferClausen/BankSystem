@@ -3,13 +3,10 @@ import org.junit.jupiter.api.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class AccountTest {
 
-<<<<<<< HEAD
-    Person person = new Person(1,"Firstname", "Lastname", 25);
-    Bank bank = new Bank("test");
-=======
+
     Person person = new Person("Firstname", "Lastname", 25);
-    Bank bank = new Bank();
->>>>>>> 980a394674b86aa251562a0fad3d3eaff921ed36
+    Bank bank = new Bank("test");
+
     Account account = new Account(person, bank);
 
     @Order(1)
