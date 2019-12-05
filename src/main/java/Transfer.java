@@ -24,6 +24,12 @@ public class Transfer {
         }
     }
 
+    public void dataForTest(){
+        accountList.add(new Account(111, 20000.0d, new Person("Maroc", "Maroc", 50), new Bank("SwedBank")));
+        accountList.add(new Account(112, 30000.0d, new Person("Safi", "Safi", 15), new Bank("SEB")));
+
+    }
+
     public void deposit(Account a, int depositAmount) {
         if (depositAmount > 0) {
             a.addAmount(depositAmount);
@@ -31,14 +37,12 @@ public class Transfer {
     }
 
     public void transfer(int accountIdFrom , int accountIdTo, double transferAmount) {
-
         List<Account> filterList = accountList.stream()
                 .filter(e -> e.getId() == accountIdFrom)
                 .collect(Collectors.toList());
         List<Account> filterList1 = accountList.stream()
                 .filter(e -> e.getId() == accountIdTo)
                 .collect(Collectors.toList());
-
         if (filterList.size()>=1 || filterList1.size() >= 1) {
             if (transferAmount <= filterList.get(0).getAmount()) {
                 int index = accountList.indexOf(filterList.get(0));
@@ -47,9 +51,6 @@ public class Transfer {
                 int index1 = accountList.indexOf(filterList1.get(0));
                 double amount1 = accountList.get(index).getAmount();
                 accountList.get(index1).setAmount(amount1+transferAmount);
-
-                //System.out.println("Current balance of sending account: " + Account.getInstance().getAmount());
-                //System.out.println("Current balance of receiving account: " + Account.getInstance().getAmount());
             }
         }
     }

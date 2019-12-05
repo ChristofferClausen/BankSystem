@@ -1,17 +1,25 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class AppController {
+public class AppController implements Initializable {
     @FXML private TextArea messageTransfer;
     @FXML private TextField idAmount, idTextTo, idTextFr, textId;
     @FXML private Button selectId;
 
 
     public AppController() {
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+      Transfer.getInstance().dataForTest();
     }
 
     @FXML
@@ -62,7 +70,6 @@ public class AppController {
         int idTo = Integer.parseInt(idTextTo.getText());
         double amount = Double.parseDouble(idAmount.getText());
         Transfer.getInstance().transfer(idFrom, idTo, amount);
-
         idTextFr.setText("");
         idTextTo.setText("");
         idAmount.setText("");
