@@ -18,7 +18,7 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#314e6887" height="494.0" layoutX="3.0" layoutY="120.0" stroke="#ebd005" strokeType="INSIDE" width="608.0" />
         <Button layoutX="116.0" layoutY="139.0" onAction="#goToDeposit" prefHeight="40.0" prefWidth="400" style="-fx-background-color: #80334d; -fx-border-color: #000000;" text="DEPOSIT" textFill="WHITE" />
         <Button layoutX="116.0" layoutY="214.0" onAction="#goToWithdraw" prefHeight="40.0" prefWidth="400" style="-fx-background-color: #80334d; -fx-border-color: #000000;" text="WITHDRAW" textFill="WHITE" />
-      <Button layoutX="117.0" layoutY="287.0" onAction="#goToWithdraw" prefHeight="40.0" prefWidth="400" style="-fx-background-color: #80334d; -fx-border-color: #000000;" text="TRANSACTION" textFill="WHITE" />
+      <Button layoutX="117.0" layoutY="287.0" onAction="#goToTransfer" prefHeight="40.0" prefWidth="400" style="-fx-background-color: #80334d; -fx-border-color: #000000;" text="TRANSFER" textFill="WHITE" />
       <Button layoutX="118.0" layoutY="359.0" onAction="#goToWithdraw" prefHeight="40.0" prefWidth="400" style="-fx-background-color: #80334d; -fx-border-color: #000000;" text="BANK STATEMENTS" textFill="WHITE" />
       <Button layoutX="6.0" layoutY="577.0" onAction="#goToWithdraw" prefHeight="30.0" prefWidth="602.0" style="-fx-background-color: #0052f8; -fx-border-color: #000000;" text="GO BACK TO HOME" textFill="WHITE">
          <font>

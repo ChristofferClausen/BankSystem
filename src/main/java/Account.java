@@ -1,15 +1,13 @@
 import java.util.UUID;
 
 public class Account {
-    private static Account  account = null;
 
     private int id;
     private double amount = 0;
     private Person person;
     private Bank bank;
 
-    private Account() {
-    }
+
 
     public Account(Person p, Bank b) {
         this.person = p;
@@ -22,14 +20,6 @@ public class Account {
         this.amount = amount;
         this.person = person;
         this.bank = bank;
-    }
-
-    public static Account getInstance(){
-        if (account == null)
-        {
-            account = new Account();
-        }
-        return account;
     }
 
     public void setId(int id) {

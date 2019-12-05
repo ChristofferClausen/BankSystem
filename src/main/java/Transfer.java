@@ -4,6 +4,16 @@ import java.util.stream.Collectors;
 
 public class Transfer {
     List<Account>  accountList = new ArrayList<>();
+    private static Transfer  transfer = null;
+    private Transfer() {
+    }
+    public static Transfer getInstance(){
+        if (transfer == null)
+        {
+            transfer = new Transfer();
+        }
+        return transfer;
+    }
 
     public void withdraw(Account a, int withdrawAmount) {
         double currentAmount = a.getAmount();

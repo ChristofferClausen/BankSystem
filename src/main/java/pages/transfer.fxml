@@ -20,14 +20,14 @@
         </Label>
         <Label layoutX="78.0" layoutY="183.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text=" FROM :  Account ID" textFill="WHITE" />
         <Label layoutX="78.0" layoutY="289.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text=" Amount" textFill="WHITE" />
-        <TextField layoutX="216.0" layoutY="183.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
-        <TextField layoutX="216.0" layoutY="289.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
-        <Button layoutX="434.0" layoutY="433.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #13a44d; -fx-border-color: #111111;" text="Save" textFill="WHITE" />
+        <TextField fx:id="idTextFr" layoutX="216.0" layoutY="183.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
+        <TextField fx:id="idTextTo" layoutX="216.0" layoutY="289.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
+        <Button layoutX="434.0" layoutY="433.0" mnemonicParsing="false" onAction="#makeTransfer" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #13a44d; -fx-border-color: #111111;" text="Save" textFill="WHITE" />
         <Button layoutX="12.0" layoutY="516.0" mnemonicParsing="false" onAction="#backToHome" prefHeight="27.0" prefWidth="593.0" style="-fx-background-color: #1246bf; -fx-border-color: #000000;" text="Back to home" textFill="WHITE" />
       <Label layoutX="78.0" layoutY="237.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text=" TO :  Account ID" textFill="WHITE" />
-      <TextField layoutX="216.0" layoutY="237.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
+      <TextField fx:id="idAmount" layoutX="216.0" layoutY="237.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
       <Label layoutX="78.0" layoutY="341.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text=" Message" textFill="WHITE" />
-      <TextArea layoutX="217.0" layoutY="341.0" prefHeight="72.0" prefWidth="300.0" />
+      <TextArea fx:id="messageTransfer" layoutX="217.0" layoutY="341.0" prefHeight="72.0" prefWidth="300.0" />
     </AnchorPane>
     <padding>
         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
