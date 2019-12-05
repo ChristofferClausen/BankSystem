@@ -16,7 +16,7 @@ public class TransferTest {
     @Test
     public void depositTest() {
         transfer.deposit(account, 100);
-        Assertions.assertEquals(100, account.getAmount());
+        Assertions.assertEquals(100, account.getBalance());
     }
 
     @Order(2)
@@ -24,7 +24,7 @@ public class TransferTest {
     public void withdrawTest() {
         transfer.deposit(account, 100);
         transfer.withdraw(account, 100);
-        Assertions.assertEquals(0, account.getAmount());
+        Assertions.assertEquals(0, account.getBalance());
     }
 
     @Order(3)
@@ -32,7 +32,7 @@ public class TransferTest {
     public void transferTest() {
         transfer.deposit(account, 100);
         transfer.transfer(account, account2, 50);
-        Assertions.assertEquals(50, account.getAmount());
-        Assertions.assertEquals(50, account2.getAmount());
+        Assertions.assertEquals(50, account.getBalance());
+        Assertions.assertEquals(50, account2.getBalance());
     }
 }

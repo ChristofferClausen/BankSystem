@@ -3,7 +3,6 @@ import org.junit.jupiter.api.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class AccountTest {
 
-
     Person person = new Person("Firstname", "Lastname", 25);
     Bank bank = new Bank("test");
 
@@ -51,6 +50,6 @@ public class AccountTest {
     @Order(7)
     @Test
     public void  getBankTest() {
-//        Assertions.assertEquals(bank, account.getBank());
+        Assertions.assertEquals(bank, account.getBank());
     }
 }
