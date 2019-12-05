@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="640.0" prefWidth="634.0" spacing="20.0" style="-fx-background-color: #111111;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.PrimaryController">
+<VBox alignment="CENTER" prefHeight="640.0" prefWidth="634.0" spacing="20.0" style="-fx-background-color: #111111;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppController">
     <AnchorPane prefHeight="650.0" prefWidth="631.0" scaleShape="false" style="-fx-background-color: #99999; -fx-border-color: #f4e803;">
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f718c" height="442.0" layoutX="3.0" layoutY="123.0" stroke="#ffee00" strokeType="INSIDE" width="614.0" />
         <Label contentDisplay="CENTER" layoutX="238.0" layoutY="6.0" prefHeight="30.0" prefWidth="130.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text="  CREATE NEW ACCOUNT" textFill="WHITE" AnchorPane.bottomAnchor="586.0" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="253.0" AnchorPane.topAnchor="6.0">
