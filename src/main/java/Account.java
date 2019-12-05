@@ -2,22 +2,35 @@ import java.util.UUID;
 
 public class Account {
 
-    private UUID id;
+    private int id;
     private double amount = 0;
     private Person person;
     private Bank bank;
 
+
+
     public Account(Person p, Bank b) {
         this.person = p;
         this.bank = b;
-        assignId();
+        //assignId();
     }
 
-    private void assignId() {
-        id = UUID.randomUUID();
+    public Account(int id, double amount, Person person, Bank bank) {
+        this.id = id;
+        this.amount = amount;
+        this.person = person;
+        this.bank = bank;
     }
 
-    public UUID getId(){
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public int getId(){
         return id;
     }
 
@@ -41,4 +54,7 @@ public class Account {
         return bank;
     }
 
+    public double getAmount() {
+        return amount;
+    }
 }

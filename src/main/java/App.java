@@ -5,24 +5,29 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-/**
- * JavaFX App
- */
+
 public class App extends Application {
-    AppController controller;
+
+    private static Scene scene;
+
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("home.fxml"));
-        Parent root = loader.load();
-        controller = loader.getController();
-        primaryStage.setTitle("Bank System");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
+    public void start(Stage stage) throws IOException {
+        scene = new Scene(loadFXML("home"));
+        stage.setScene(scene);
+        stage.show();
     }
 
+    static void setRoot(String fxml) throws IOException {
+        scene.setRoot(loadFXML(fxml));
+    }
 
-    public static void main(String[] args){
-        launch(args);
+    private static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        return fxmlLoader.load();
+    }
+
+    public static void main(String[] args) {
+        launch();
     }
 
 }

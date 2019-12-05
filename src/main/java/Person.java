@@ -8,11 +8,14 @@ public class Person implements Human {
     private int age;
 
     public Person(String firstName, String lastName, int age) {
-        this.id = UUID.randomUUID();
+       // this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
     }
+
+
+
 
     @Override
     public UUID getId() {
