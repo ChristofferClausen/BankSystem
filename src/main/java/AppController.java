@@ -1,5 +1,6 @@
 import bank.BankName;
 import human.Person;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,7 +15,8 @@ import java.util.ResourceBundle;
 public class AppController implements Initializable {
     @FXML private TextArea messageTransfer;
     @FXML private TextField idAmount, idTextTo, idTextFr, textId, amountId, firstNameId, lastNameId, ageId, bankId;
-    @FXML private ComboBox bankNameId, personId;
+    @FXML private ComboBox<BankName> bankNameId;
+    @FXML private ComboBox personId;
     @FXML private Button selectId;
     Model model;
     AccountingSystem accountingSystem;
@@ -27,6 +29,8 @@ public class AppController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
       BankName.getInstance().dataForTest();
         model = new Model();
+        bankNameId = new ComboBox<>(FXCollections.observableArrayList(model.bankNameList));
+        personId = new ComboBox<>(FXCollections.observableArrayList(model.personList));
     }
 
     @FXML
@@ -92,17 +96,17 @@ public class AppController implements Initializable {
         }
     }
     @FXML
-    private void createNewAccount(){           //TODO Halim will end this
-        String bankName= "swedBank"; //bankNameId.getAccessibleText();
-        float saldo = Float.parseFloat("60000");//amountId.getText());
-        String textPerson = "Seco Deco 42";//personId.getAccessibleText();
+    private void createNewAccount(){           //values in comments for JUnit test
+        String bankName= bankNameId.getAccessibleText(); // String bankName= "swedBank";
+        float saldo = Float.parseFloat(amountId.getText()); //float saldo = Float.parseFloat("60000");
+        String textPerson = personId.getAccessibleText(); //String textPerson = "Seco Deco 42";
         String[] words=textPerson.split(" ");
         int l = words.length;
         String firstName = words[0];
         String lastName = words[1];
         int age = Integer.parseInt(words[2]);
-        //model.accountList = accountingSystem.createAccount(bankNameId.getAccessibleText(), BankName.getInstance().accountId(), Float.parseFloat(amountId.getText()), new Person(firstName, lastName, age));
-        BankName.getInstance().accountList.add(new BankName(bankName, BankName.getInstance().accountId(), saldo, new Person(firstName, lastName, age)));
+        model.accountList = accountingSystem.createAccount(bankNameId.getAccessibleText(), BankName.getInstance().accountId(), Float.parseFloat(amountId.getText()), new Person(firstName, lastName, age));
+        //BankName.getInstance().accountList.add(new BankName(bankName, BankName.getInstance().accountId(), saldo, new Person(firstName, lastName, age)));
     }
     @FXML
     private void createNewPerson(ActionEvent actionEvent){
