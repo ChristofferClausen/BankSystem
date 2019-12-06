@@ -96,9 +96,10 @@ public class AppController implements Initializable {
         }
     }
     @FXML
-    private void createNewAccount(){           //values in comments for JUnit test
-        String bankName= bankNameId.getAccessibleText(); // String bankName= "swedBank";
-        float saldo = Float.parseFloat(amountId.getText()); //float saldo = Float.parseFloat("60000");
+    private void createNewAccount(){
+        //values in comments for JUnit test
+        // String bankName= "swedBank";
+        //float saldo = Float.parseFloat("60000");
         String textPerson = personId.getAccessibleText(); //String textPerson = "Seco Deco 42";
         String[] words=textPerson.split(" ");
         int l = words.length;
