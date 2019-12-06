@@ -17,7 +17,7 @@
                 <Font name="Calibri Bold" size="12.0" />
             </font>
         </Label>
-        <Label layoutX="78.0" layoutY="183.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text=" Account ID" textFill="WHITE" />
+        <Label layoutX="78.0" layoutY="183.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text=" Acco ID" textFill="WHITE" />
         <Label layoutX="78.0" layoutY="223.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text=" Amount" textFill="WHITE" />
         <TextField layoutX="216.0" layoutY="183.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
         <TextField layoutX="216.0" layoutY="223.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />

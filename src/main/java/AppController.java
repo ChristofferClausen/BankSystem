@@ -1,6 +1,9 @@
+import bank.BankName;
+import human.Person;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
@@ -10,8 +13,11 @@ import java.util.ResourceBundle;
 
 public class AppController implements Initializable {
     @FXML private TextArea messageTransfer;
-    @FXML private TextField idAmount, idTextTo, idTextFr, textId;
+    @FXML private TextField idAmount, idTextTo, idTextFr, textId, amountId;
+    @FXML private ComboBox bankNameId, personId;
     @FXML private Button selectId;
+    Model model;
+    AccountingSystem accountingSystem;
 
 
     public AppController() {
@@ -19,7 +25,8 @@ public class AppController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-      Transfer.getInstance().dataForTest();
+      BankName.getInstance().dataForTest();
+        model = new Model();
     }
 
     @FXML
@@ -69,7 +76,7 @@ public class AppController implements Initializable {
         int idFrom = Integer.parseInt(idTextFr.getText());
         int idTo = Integer.parseInt(idTextTo.getText());
         double amount = Double.parseDouble(idAmount.getText());
-        Transfer.getInstance().transfer(idFrom, idTo, amount);
+        BankName.getInstance().transfer(idFrom, idTo, (float) amount);
         idTextFr.setText("");
         idTextTo.setText("");
         idAmount.setText("");
@@ -79,9 +86,26 @@ public class AppController implements Initializable {
     @FXML
     private void selectOneAccount(ActionEvent actionEvent) throws IOException {
         int id = Integer.parseInt(textId.getText());
-        boolean exist = Transfer.getInstance().checkAccountId(id);
+        boolean exist = BankName.getInstance().checkAccountId(id);
         if (exist){
             App.setRoot("redankund");
         }
+    }
+    @FXML
+    public void createNewAccount(){           //TODO Halim will end this
+       bankNameId.setAccessibleText("swedBank");
+        personId.setAccessibleText("Seco Deco 42");
+        amountId.setText("60000");
+        String bankName= "swedBank"; //bankNameId.getAccessibleText();
+        float saldo = Float.parseFloat("60000");//amountId.getText());
+        String textPerson = "Seco Deco 42";//personId.getAccessibleText();
+        String[] words=textPerson.split(" ");
+        int l = words.length;
+        String firstName = words[0];
+        String lastName = words[1];
+        int age = Integer.parseInt(words[2]);
+        model.accountList = accountingSystem.createAccount(bankName, BankName.getInstance().accountId(), saldo, new Person(firstName, lastName, age));
+        //model.accountList.add(new BankName(bankName, BankName.getInstance().accountId(), saldo, new Person(firstName, lastName, age)));
+
     }
 }

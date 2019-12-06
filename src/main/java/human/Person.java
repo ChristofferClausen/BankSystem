@@ -1,25 +1,14 @@
-import java.util.UUID;
+package human;
 
 public class Person implements Human {
-
-    private UUID id;
     private String firstName;
     private String lastName;
     private int age;
 
     public Person(String firstName, String lastName, int age) {
-       // this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-    }
-
-
-
-
-    @Override
-    public UUID getId() {
-        return id;
     }
 
     @Override
@@ -50,5 +39,14 @@ public class Person implements Human {
     @Override
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

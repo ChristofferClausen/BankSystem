@@ -1,12 +1,14 @@
+import bank.BankName;
+import human.Person;
 import org.junit.jupiter.api.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class AccountTest {
+public class AccoTest {
 
     Person person = new Person("Firstname", "Lastname", 25);
-    Bank bank = new Bank("test");
+    BankName bankName = new BankName("test");
 
-    Account account = new Account(person, bank);
+    Acco acco = new Acco(person, bankName);
 
     @Order(1)
     @Test
@@ -16,40 +18,40 @@ public class AccountTest {
     @Order(2)
     @Test
     public void idTest() {
-        Assertions.assertNotNull(account.getId());
+        Assertions.assertNotNull(acco.getId());
     }
 
     @Order(3)
     @Test
     public void getAmountTest() {
-        Assertions.assertEquals(0,account.getAmount());
+        Assertions.assertEquals(0, acco.getAmount());
     }
 
     @Order(4)
     @Test
     public void addAmountTest() {
-        account.addAmount(100);
-        Assertions.assertEquals(100, account.getAmount());
+        acco.addAmount(100);
+        Assertions.assertEquals(100, acco.getAmount());
 
     }
 
     @Order(5)
     @Test
     public void removeAmountTest() {
-        account.addAmount(100);
-        account.removeAmount(50);
-        Assertions.assertEquals(50, account.getAmount());
+        acco.addAmount(100);
+        acco.removeAmount(50);
+        Assertions.assertEquals(50, acco.getAmount());
     }
 
     @Order(6)
     @Test
     public void getPersonTest() {
-        Assertions.assertEquals(person, account.getPerson());
+        Assertions.assertEquals(person, acco.getPerson());
     }
 
     @Order(7)
     @Test
     public void  getBankTest() {
-        Assertions.assertEquals(bank, account.getBank());
+        Assertions.assertEquals(bankName, acco.getBankName());
     }
 }

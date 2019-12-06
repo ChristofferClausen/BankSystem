@@ -10,7 +10,7 @@ public class AccoutingSystemTest {
         AccountingSystem accountingSystem = new AccountingSystem();
     }
 
-    @Test
+    /*@Test
     public void createPersonTest() {
         AccountingSystem accountingSystem = new AccountingSystem();
 
@@ -20,7 +20,7 @@ public class AccoutingSystemTest {
         Assertions.assertEquals("John", accountingSystem.getPersons().get(0).getFirstName());
         Assertions.assertEquals("Doe", accountingSystem.getPersons().get(0).getLastName());
         Assertions.assertEquals(55, accountingSystem.getPersons().get(0).getAge());
-    }
+    }*/
 
     @Test
     public void createBankTest() {

@@ -1,25 +1,26 @@
-import java.util.UUID;
+import bank.BankName;
+import human.Person;
 
-public class Account {
+public class Acco {
 
     private int id;
     private double amount = 0;
     private Person person;
-    private Bank bank;
+    private BankName bankName;
 
 
 
-    public Account(Person p, Bank b) {
+    public Acco(Person p, BankName b) {
         this.person = p;
-        this.bank = b;
+        this.bankName = b;
         //assignId();
     }
 
-    public Account(int id, double amount, Person person, Bank bank) {
+    public Acco(int id, double amount, Person person, BankName bankName) {
         this.id = id;
         this.amount = amount;
         this.person = person;
-        this.bank = bank;
+        this.bankName = bankName;
     }
 
     public void setId(int id) {
@@ -50,8 +51,8 @@ public class Account {
         return person;
     }
 
-    public Bank getBank() {
-        return bank;
+    public BankName getBankName() {
+        return bankName;
     }
 
     public double getAmount() {
