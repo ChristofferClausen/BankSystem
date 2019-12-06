@@ -108,14 +108,19 @@ public class AppController implements Initializable {
         int age = Integer.parseInt(words[2]);
         model.accountList = accountingSystem.createAccount(bankNameId.getAccessibleText(), BankName.getInstance().accountId(), Float.parseFloat(amountId.getText()), new Person(firstName, lastName, age));
         //BankName.getInstance().accountList.add(new BankName(bankName, BankName.getInstance().accountId(), saldo, new Person(firstName, lastName, age)));
+        amountId.setText("");
     }
     @FXML
     private void createNewPerson(ActionEvent actionEvent){
         model.personList.add(accountingSystem.createPerson(firstNameId.getText(), lastNameId.getText(), Integer.parseInt(ageId.getText())));
+        firstNameId.setText("");
+        lastNameId.setText("");
+        ageId.setText("");
     }
     @FXML
     private void createNewBank(ActionEvent actionEvent){
         model.bankNameList.add(accountingSystem.createBank(bankId.getText()));
+        bankId.setText("");
     }
 
 }
