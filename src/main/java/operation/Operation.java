@@ -1,5 +1,5 @@
 package operation;
 
 public interface Operation {
-    //TODO
+    //TODO kvittot och kontoutdrag
 }
