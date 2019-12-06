@@ -7,4 +7,5 @@ Linus Selvén<br/>
 Mariam Melhem<br/>
 Hüsamettin Arslan<br/>
 Halim Dakir<br/>
-Christoffer Clausen
+Christoffer Clausen<br/>
+Patrick Persson
