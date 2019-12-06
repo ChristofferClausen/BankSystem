@@ -35,7 +35,6 @@ public class BankName implements Bank {
         this.saldo = saldo;
         this.person = person;
     }
-
     public String getName() {
         return name;
     }
@@ -48,15 +47,6 @@ public class BankName implements Bank {
     public void setSaldo(float saldo) {
         this.saldo = saldo;
     }
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
     public String setName(String name) {
         this.name = name;
         return name;
@@ -65,7 +55,6 @@ public class BankName implements Bank {
     @Override
     public float deposit(int id, float amount) {
         float amountNow = 0.0f;
-
         List<BankName> filterList = accountList.stream()
                 .filter(e -> e.getId() == id)
                 .collect(Collectors.toList());
@@ -75,7 +64,6 @@ public class BankName implements Bank {
                 float amountAvailable = accountList.get(index).getSaldo();
                 amountNow = amountAvailable + amount;
                 accountList.get(index).setSaldo(amountNow);
-
             }
         }
         return amountNow;
@@ -84,7 +72,6 @@ public class BankName implements Bank {
     @Override
     public float withDraw(int id, float amount) {
         float amountNow = 0.0f;
-
         List<BankName> filterList = accountList.stream()
                 .filter(e -> e.getId() == id)
                 .collect(Collectors.toList());
@@ -96,7 +83,7 @@ public class BankName implements Bank {
                 accountList.get(index).setSaldo(amountNow);
             }
         }
-        return (float) amountNow;
+        return  amountNow;
     }
 
     @Override
@@ -120,17 +107,14 @@ public class BankName implements Bank {
         List<BankName> filterList = accountList.stream()
                 .filter(e -> e.getId() == accountIdFrom)
                 .collect(Collectors.toList());
-
         List<BankName> filterList1 = accountList.stream()
                 .filter(e -> e.getId() == accountIdTo)
                 .collect(Collectors.toList());
-
         if (filterList.size()>=1 || filterList1.size() >= 1) {
             if (filterList.get(0).getSaldo() >= transferAmount) {
                 int index = accountList.indexOf(filterList.get(0));
                 float amount = accountList.get(index).getSaldo();
                 accountList.get(index).setSaldo(amount - transferAmount);
-
                 int index1 = accountList.indexOf(filterList1.get(0));
                 float amount1 = accountList.get(index1).getSaldo();
                 accountList.get(index1).setSaldo(amount1 + transferAmount);
@@ -153,8 +137,8 @@ public class BankName implements Bank {
 
     @Override
     public String toString() {
-        return "BankName{" +
-                "name='" + name + '\'' +
+        return "Bank{" +
+                "bankName='" + name + '\'' +
                 ", id=" + id +
                 ", saldo=" + saldo +
                 ", person=" + person +

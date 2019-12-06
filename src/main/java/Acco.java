@@ -1,7 +1,7 @@
 import bank.BankName;
 import human.Person;
 
-public class Acco {
+public class Acco {        //WE ARE NOT GOING TO NEED IT ANYMORE
 
     private int id;
     private double amount = 0;
