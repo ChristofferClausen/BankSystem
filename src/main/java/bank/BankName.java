@@ -53,7 +53,7 @@ public class BankName implements Bank {
     }
 
     @Override
-    public float deposit(int id, float amount) {
+    public void deposit(int id, float amount) {
         float amountNow = 0.0f;
         List<BankName> filterList = accountList.stream()
                 .filter(e -> e.getId() == id)
@@ -66,11 +66,10 @@ public class BankName implements Bank {
                 accountList.get(index).setSaldo(amountNow);
             }
         }
-        return amountNow;
     }
 
     @Override
-    public float withDraw(int id, float amount) {
+    public void withDraw(int id, float amount) {
         float amountNow = 0.0f;
         List<BankName> filterList = accountList.stream()
                 .filter(e -> e.getId() == id)
@@ -83,7 +82,6 @@ public class BankName implements Bank {
                 accountList.get(index).setSaldo(amountNow);
             }
         }
-        return  amountNow;
     }
 
     @Override
