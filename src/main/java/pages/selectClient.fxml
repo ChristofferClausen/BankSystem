@@ -11,16 +11,21 @@
 
 <VBox alignment="CENTER" prefHeight="640.0" prefWidth="634.0" spacing="20.0" style="-fx-background-color: #111111;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppController">
     <AnchorPane prefHeight="650.0" prefWidth="631.0" scaleShape="false" style="-fx-background-color: #9999; -fx-border-color: #f4e803;">
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#314e68" height="173.0" layoutX="8.0" layoutY="205.0" stroke="#ffc400" strokeType="INSIDE" width="601.0" />
-        <Label contentDisplay="CENTER" layoutX="265.0" layoutY="4.0" prefHeight="23.0" prefWidth="90.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text="   SELECT CLIENT" textFill="WHITE" AnchorPane.bottomAnchor="595.0" AnchorPane.leftAnchor="265.0" AnchorPane.rightAnchor="261.0" AnchorPane.topAnchor="4.0">
+      <AnchorPane layoutX="8.0" layoutY="204.0" prefHeight="200.0" prefWidth="601.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#314e68" height="173.0" layoutX="8.0" layoutY="205.0" stroke="#ffc400" strokeLineCap="BUTT" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" width="601.0" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="251.0" layoutY="6.0" prefHeight="30.0" prefWidth="86.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text="CLIENT LOGIN" textFill="WHITE" AnchorPane.bottomAnchor="586.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="279.0" AnchorPane.topAnchor="6.0">
             <font>
                 <Font name="Calibri Bold" size="12.0" />
             </font>
         </Label>
-        <Label layoutX="245.0" layoutY="254.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text="        Acco ID" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="CLIP" />
-        <TextField fx:id="textId" layoutX="191.0" layoutY="288.0" prefHeight="30.0" prefWidth="235.0" style="-fx-border-color: #111111;" />
-      <Button fx:id="selectId" layoutX="273.0" layoutY="345.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" onAction="#selectOneAccount" style="-fx-background-color: #004eae; -fx-border-color: #000000;" text="OK" textFill="WHITE" />
-
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="241.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text="Account ID" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="CLIP" />
+        <TextField fx:id="textId" alignment="CENTER" layoutX="241.0" layoutY="274.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #111111;" />
+      <Button fx:id="selectId" alignment="CENTER" contentDisplay="CENTER" layoutX="269.0" layoutY="327.0" mnemonicParsing="false" onAction="#selectOneAccount" prefHeight="37.0" prefWidth="71.0" style="-fx-background-color: #004eae; -fx-border-color: #000000;" text="Connect" textFill="WHITE" />
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="579.0" onAction="#goToMainMenu" prefHeight="37.0" prefWidth="602.0" style="-fx-background-color: #0052f8; -fx-border-color: #000000;" text="GO BACK TO HOME" textFill="WHITE">
+            <font>
+                <Font name="Arial" size="10.0" />
+            </font>
+        </Button>
     </AnchorPane>
     <padding>
         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

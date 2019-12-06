@@ -18,7 +18,7 @@ public class AppController implements Initializable {
     @FXML private Label accountIdClient, firstNameClient, lastNameClient, saldoClient;
     @FXML private ComboBox<BankName> bankNameId;
     @FXML private ComboBox personId;
-    @FXML private Button selectId;
+    @FXML private Button selectId, newClientId, newBankIId, newAccountId;
     private int tempId;
     private List<BankName> filterList;
     Model model;
@@ -65,6 +65,10 @@ public class AppController implements Initializable {
         App.setRoot("selectClient");
     }
     @FXML
+    private void goToRedanKundMenu() throws IOException {
+        App.setRoot("redankund");
+    }
+    @FXML
     private void goToWithdraw() throws IOException {
         App.setRoot("withdraw");
     }
@@ -79,7 +83,7 @@ public class AppController implements Initializable {
     }
     @FXML
     private void goTobankStatements() throws IOException{
-        App.setRoot("bankStatement");
+        App.setRoot("bankStatements");
     }
     @FXML
     private void selectOneAccount(ActionEvent actionEvent) throws IOException {
@@ -87,6 +91,7 @@ public class AppController implements Initializable {
         boolean exist = BankName.getInstance().checkAccountId(id);
         if (exist){
             tempId = Integer.parseInt(accountId.getText());
+            textId.setText("");
             filterList = model.accountList.stream()
                     .filter(e -> e.getId() == tempId)
                     .collect(Collectors.toList());
@@ -95,8 +100,10 @@ public class AppController implements Initializable {
             //lastNameClient.setText(filterList.get(0).);
             saldoClient.setText(String.valueOf(filterList.get(0).getSaldo()));
             App.setRoot("redankund");
+        }else {
+            textId.setText("");
+            errorLogin();
         }
-        textId.setText("");
     }
     @FXML
     private void createNewAccount(ActionEvent actionEvent){
@@ -173,10 +180,32 @@ public class AppController implements Initializable {
 
     @FXML
     private void goToMainMenu(ActionEvent actionEvent) throws IOException{
+        accountIdClient.setText("0");
+        firstNameClient.setText(null);
+        lastNameClient.setText(null);
+        saldoClient.setText("0.0");
+        textId.setText("");
         tempId = 0;
         filterList.clear();
         App.setRoot("home");
     }
+    private void errorLogin(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("LOGIN ERROR");
+        alert.setHeaderText(null);
+        alert.setContentText("THIS ID DOES NOT EXISTE!");
+        alert.showAndWait();
+    }
+    public void errorAmount(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("WRONG AMOUNT");
+        alert.setHeaderText(null);
+        alert.setContentText("THIS AMOUNT AVAILABLE IS LESS THAN WHAT IT HAS BEEN CHOSEN!");
+        alert.showAndWait();
+    }
 
-
+    @FXML
+    public void goBack() throws IOException{
+        App.setRoot("home");
+    }
 }

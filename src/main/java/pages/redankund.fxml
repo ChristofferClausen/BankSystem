@@ -32,7 +32,7 @@
         <Button layoutX="116.0" layoutY="327.0" onAction="#goToWithdraw" prefHeight="40.0" prefWidth="400" style="-fx-background-color: #80334d; -fx-border-color: #000000;" text="WITHDRAW" textFill="WHITE" />
       <Button layoutX="117.0" layoutY="382.0" onAction="#goToTransfer" prefHeight="40.0" prefWidth="400" style="-fx-background-color: #80334d; -fx-border-color: #000000;" text="TRANSFER" textFill="WHITE" />
       <Button layoutX="118.0" layoutY="436.0" onAction="#goTobankStatements" prefHeight="40.0" prefWidth="400" style="-fx-background-color: #80334d; -fx-border-color: #000000;" text="BANK STATEMENTS" textFill="WHITE" />
-      <Button layoutX="6.0" layoutY="577.0" onAction="#goToMainMenu" prefHeight="30.0" prefWidth="602.0" style="-fx-background-color: #0052f8; -fx-border-color: #000000;" text="GO BACK TO HOME" textFill="WHITE">
+      <Button layoutX="3.0" layoutY="581.0" onAction="#goToMainMenu" prefHeight="30.0" prefWidth="602.0" style="-fx-background-color: #0052f8; -fx-border-color: #000000;" text="GO BACK TO HOME" textFill="WHITE">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
