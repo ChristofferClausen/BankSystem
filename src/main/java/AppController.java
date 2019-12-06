@@ -206,6 +206,6 @@ public class AppController implements Initializable {
 
     @FXML
     public void goBack() throws IOException{
-        App.setRoot("home");
+        App.setRoot("nykund");
     }
 }
