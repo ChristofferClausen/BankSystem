@@ -1,26 +1,20 @@
+import bank.BankName;
+import human.Person;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class AccountingSystem {
-    private ArrayList<Person> persons;
 
-    public AccountingSystem() {
-        this.persons = new ArrayList<>();
+    public BankName createBank(String bankName) {
+        return new BankName(bankName);
     }
-
-    public ArrayList<Person> getPersons() {
-        return persons;
+    public Person createPerson(String fn, String ln, int age) {
+        return new Person(fn,ln,age);
     }
-
-    public void createBank(String s) {
-        //Bank b = new Bank(s);
-    }
-
-    public void createPerson(String fn, String ln, int age) {
-        Person person = new Person(fn, ln, age);
-        persons.add(person);
-    }
-
-    public void createAccount(double saldo, Person p, Bank b) {
-        //Account account = new Account(saldo, p, b);
+    public List<BankName> createAccount(String bankName, int accountId, float saldo, Person person) {
+        List<BankName> accountList = new ArrayList<>();
+        accountList.add(new BankName(bankName, BankName.getInstance().accountId(), saldo, person));
+        return accountList;
     }
 }

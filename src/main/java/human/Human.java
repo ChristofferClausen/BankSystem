@@ -1,7 +1,9 @@
+package human;
+
 import java.util.UUID;
 
 public interface Human {
-    UUID getId();
+    //UUID getId();
 
     String getFirstName();
 

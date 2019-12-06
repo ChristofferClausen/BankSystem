@@ -20,9 +20,9 @@
         <Label layoutX="78.0" layoutY="183.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text=" First Name " textFill="WHITE" />
         <Label layoutX="78.0" layoutY="223.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text=" Last Name " textFill="WHITE" />
         <Label layoutX="78.0" layoutY="264.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-color: #f4e803; -fx-background-color: #000000;" text=" Age " textFill="WHITE" />
-        <TextField layoutX="216.0" layoutY="183.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
-        <TextField layoutX="216.0" layoutY="223.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
-        <TextField layoutX="216.0" layoutY="264.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
+        <TextField fx:id="firstNameId" layoutX="216.0" layoutY="183.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
+        <TextField fx:id="lastNameId" layoutX="216.0" layoutY="223.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
+        <TextField fx:id="ageId" layoutX="216.0" layoutY="264.0" prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: #111111;" />
         <Button layoutX="434.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #4986ee; -fx-border-color: #111111;" text="Save" textFill="WHITE" />
         <Button layoutX="342.0" layoutY="307.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #f86c5f; -fx-border-color: #111111;" text="Delete" textFill="WHITE" />
         <Button layoutX="12.0" layoutY="516.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="593.0" onAction="#backToHome" style="-fx-background-color: #351717; -fx-border-color: #f4e803;" text="Back to home" textFill="WHITE" />

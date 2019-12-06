@@ -1,11 +1,18 @@
+import bank.BankName;
+import human.Person;
 import org.junit.jupiter.api.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TransferTest {
 
 
-    Person person = new Person("Firstname", "Lastname", 25);
-    Bank bank = new Bank("test");
+
+
+   /* human.Person person = new human.Person("Firstname", "Lastname", 25);
+    bank.Bank bank = new bank.Bank("test");
 
 
     Account account = new Account(person, bank);
@@ -34,5 +41,5 @@ public class TransferTest {
         transfer.transfer(account, account2, 50);
         Assertions.assertEquals(50, account.getBalance());
         Assertions.assertEquals(50, account2.getBalance());
-    }
+    }*/
 }
