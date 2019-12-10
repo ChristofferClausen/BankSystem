@@ -32,6 +32,14 @@
             <url>https://github.com/mary-mel</url>
             <organization>ITHS</organization>
         </developer>
+
+        <developer>
+            <name>Husam Arslan</name>
+            <email>kaysersoza@outlook.com</email>
+            <url>https://github.com/KayzerSoza</url>
+            <organization>ITHS</organization>
+        </developer>
+
     </developers>
 
     <dependencies>
@@ -84,8 +92,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>13</source>
+                    <target>13</target>
                 </configuration>
             </plugin>
             <plugin>
